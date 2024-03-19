@@ -31,6 +31,7 @@ public class ClientRequestDTO {
     private EnderecoDTO endereco;
 
     @Valid
+    @Size(min = 1, message = "Telefone inválido: Telefone vazio")
     private List<TelefoneDTO> telefones;
 
     @NotEmpty(message = NULL)
